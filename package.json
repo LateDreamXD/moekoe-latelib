@@ -1,0 +1,21 @@
+{
+  "name": "moekoe-plugin-template-ts",
+  "type": "module",
+  "private": true,
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "build": "tsdown",
+    "postbuild": "utils gen-manifest"
+  },
+  "author": "",
+  "license": "",
+  "devDependencies": {
+    "@latedream/moekoe-plugin-utils": "1.0.0-rc.1",
+    "@latedream/moekoe-types": "^1.6.7",
+    "@types/node": "^26.0.1",
+    "chrome-types": "^0.1.431",
+    "tsdown": "^0.22.3",
+    "typescript": "^6.0.3"
+  }
+}
