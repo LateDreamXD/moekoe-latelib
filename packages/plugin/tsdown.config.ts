@@ -14,14 +14,11 @@ export default defineConfig([
 			to: 'dist'
 		},
 		entry: {
-			content: 'src/content/index.ts'
+			lib: 'src/index.ts'
 		},
-		...shared
-	},
-	{
-		entry: {
-			background: 'src/background/index.ts'
-		},
-		...shared
+		...shared,
+		deps: {
+			alwaysBundle: ['vue']
+		}
 	}
 ]);

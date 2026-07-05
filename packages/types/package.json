@@ -1,0 +1,20 @@
+{
+  "name": "@latedream/moekoe-latelib-types",
+  "version": "0.1.0",
+  "description": "Types Definitions for MoeKoe LateLib",
+  "license": "CC0-1.0",
+  "author": "晚梦",
+  "type": "module",
+  "module": "./types/index.d.ts",
+  "types": "./types/index.d.ts",
+  "typings": "./types/index.d.ts",
+  "scripts": {
+    "build": "tsdown"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "types"
+  ]
+}

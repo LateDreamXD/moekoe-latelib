@@ -1,0 +1,21 @@
+{
+  "name": "docs",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Docs for MoeKoe LateLib",
+  "license": "UNLICENSED",
+  "author": "晚梦",
+  "type": "module",
+  "scripts": {
+    "build": "vitepress build",
+    "dev": "vitepress dev",
+    "preview": "vitepress preview"
+  },
+  "devDependencies": {
+    "vitepress": "2.0.0-alpha.17"
+  },
+  "dependencies": {
+    "vitepress-plugin-codeblocks-fold": "^1.2.35",
+    "vitepress-plugin-group-icons": "^1.7.5"
+  }
+}

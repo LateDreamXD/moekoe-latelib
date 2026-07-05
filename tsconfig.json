@@ -1,6 +1,18 @@
 {
-  "references": [
-    {"path": "./tsconfig.app.json"},
-    {"path": "./tsconfig.node.json"}
+  "compilerOptions": {
+    "composite": true,
+    "strict": true,
+    "target": "esnext",
+    "module": "esnext",
+
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+
+    "paths": {
+      "@packages/*": ["./packages/*"]
+    }
+  },
+  "include": [
+    "packages/**/*"
   ]
 }

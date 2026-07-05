@@ -4,23 +4,23 @@
     "outpath": "dist/manifest.json"
   },
   "meta": {
+    "id": "latelib",
     "permissions": ["scripting"],
     "injects": [
       {
         "matches": ["<all_urls>"],
-        "js": ["content.iife.js"],
-        "run_at": "document_end"
+        "js": ["lib.iife.js"],
+        "run_at": "document_start",
+        "world": "MAIN"
       }
     ],
-    "background": "background.iife.js",
     "popup": {
       "html": "popup.html",
       "icon": "icon.png",
       "title": "popup"
     },
     "icons": {
-      "768": "icon.png"
-    },
-    "generator": "moekoe-plugin-template-ts"
+      "128": "icon.png"
+    }
   }
 }

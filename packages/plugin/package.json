@@ -1,5 +1,5 @@
 {
-  "name": "moekoe-latelib",
+  "name": "latelib",
   "type": "module",
   "private": true,
   "version": "0.1.0",
@@ -14,11 +14,6 @@
   },
   "license": "MIT",
   "devDependencies": {
-    "@types/node": "^26.0.1",
-    "tsdown": "^0.22.3",
-    "typescript": "^6.0.3",
-    "vue": "^3.5.39",
-    "vue-router": "^5.1.0"
-  },
-  "packageManager": "pnpm@11.9.0"
+    "@latedream/moekoe-plugin-utils": "1.0.0-beta.2"
+  }
 }
