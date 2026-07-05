@@ -1,5 +1,6 @@
 dist/
 node_modules/
+types
 
 # package manager lock files
 bun.lockb
