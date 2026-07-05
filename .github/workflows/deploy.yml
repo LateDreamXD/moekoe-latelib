@@ -3,6 +3,7 @@ name: Deploy
 on:
   push:
     branches: [ main ]
+    paths: [ 'packages/docs' ]
 
 concurrency:
   group: pages-deploy
