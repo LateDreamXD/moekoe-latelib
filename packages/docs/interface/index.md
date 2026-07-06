@@ -29,7 +29,7 @@ interface LateLib {
 		setTheme: (theme: MoeKoeTheme) => void,
 		theme: MoeKoeTheme
 	};
-	useVue: () => Module<vue>;
+	useVue: () => typeof import('vue');
 	useVueRouter: () => {
 		route: RouteLocationNormalizedLoadedGeneric,
 		router: RouterClassic
