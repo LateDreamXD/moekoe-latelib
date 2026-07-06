@@ -1,0 +1,52 @@
+name: 📄 文档问题
+description: 在查阅文档时遇到了问题
+title: "[Doc]: "
+labels: ["documentation"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 感谢您愿意为 LateLib 文档提交问题回报
+        ## 以下是一些注意事项，请务必阅读让我们能够更容易处理
+
+        ### ❗ | 确定没有相同问题的ISSUE已被提出。
+        ### ❗ | 确定没有相同问题的PULL REQUEST已被发起。
+        ### 🌎 | 请准确填写环境信息。
+
+        ---
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 请确保您已阅读以上注意事项，并勾选下方的确认框。
+      options:
+        - label: 我已知晓并同意，如果我不按照模板提供的指示进行填写，则我的 Issue 可能会被无条件关闭/锁定。
+          required: true
+        - label: 我已在 [Issue Tracker](https://github.com/LateDreamXD/moekoe-latelib/issues) 中找过我要提出的问题，没有找到类似 Issue。
+          required: true
+        - label: 我已在 [Pull Request](https://github.com/LateDreamXD/moekoe-latelib/pulls) 中找过我要提出的问题，没有找到类似 Pull Request。
+          required: true
+        - label: 我已知晓并同意，此处仅用于汇报 LateLib 文档中存在的问题，否则我的 Issue 可能会被无条件关闭/锁定。
+          required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ## 信息
+
+  - type: input
+    id: link
+    attributes:
+      label: 有问题的链接
+    validations:
+      required: true
+
+  # - type: input
+  #   id: commit-id
+  #   attributes:
+  #     label: Commit Id（可选）
+
+  - type: textarea
+    id: extra-description
+    attributes:
+      label: 补充说明（可选）
