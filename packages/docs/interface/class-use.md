@@ -62,7 +62,7 @@
 
 - 类型
   ```ts
-  function useVue(): Module<vue>;
+  function useVue(): typeof import('vue');
   ```
 
 - 详细信息
