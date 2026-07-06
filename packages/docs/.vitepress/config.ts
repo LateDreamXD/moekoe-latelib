@@ -5,9 +5,20 @@ import { groupIconMdPlugin, groupIconVitePlugin } from 'vitepress-plugin-group-i
 export default defineConfig({
 	title: "MoeKoe LateLib",
 	description: "A library for MoeKoe Music plugins",
+	lang: 'zh-CN',
 	base: '/moekoe-latelib/',
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
+		docFooter: {
+			prev: '上一页',
+			next: '下一页'
+		},
+
+		editLink: {
+			pattern: 'https://github.com/LateDreamXD/moekoe-latelib/edit/main/packages/docs/:path',
+			text: '编辑此页'
+		},
+
 		nav: [
 			{ text: '首页', link: '/' },
 			{ text: '接口', link: '/interface/' }
