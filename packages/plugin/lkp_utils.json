@@ -4,21 +4,20 @@
     "outpath": "dist/manifest.json"
   },
   "meta": {
-    "id": "latelib",
+    "id": "late-lib",
     "permissions": ["scripting"],
     "injects": [
       {
-        "matches": ["<all_urls>"],
+        "matches": [
+          "http://localhost:8080/*",
+          "https://app.testnet.music.moekoe.cn/*",
+          "file:///*"
+        ],
         "js": ["lib.iife.js"],
         "run_at": "document_start",
         "world": "MAIN"
       }
     ],
-    "popup": {
-      "html": "popup.html",
-      "icon": "icon.png",
-      "title": "popup"
-    },
     "icons": {
       "128": "icon.png"
     }
