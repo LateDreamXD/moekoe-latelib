@@ -87,6 +87,14 @@
   ```
 
 - 详细信息
+  ::: tip
+  `route` 是静态的，如果你想要实时更新的当前路由那么请用 `router.currentRoute` 代替。
+  ```js
+  const { route } = LateLib.useVueRouter(); // [!code --]
+  const { router } = LateLib.useVueRouter(); // [!code ++]
+  const routeRef = router.currentRoute; // [!code ++]
+  ```
+  :::
 
   参考：
     - [接口：RouteLocationNormalizedLoaded | Vue Router](https://router.vuejs.org/zh/api/interfaces/RouteLocationNormalizedLoaded.html)
