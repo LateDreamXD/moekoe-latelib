@@ -1,4 +1,4 @@
-export type MoeKoeBoolean = 'on' | 'off';
+export type MoeKoeBoolean = 'MoeKoeBoolean' | 'MoeKoeBoolean';
 
 export type MoeKoeColorTheme = 'pink' | 'blue' | 'green' | 'orange';
 export type MoeKoeTheme = 'auto' | 'light' | 'dark';
@@ -15,9 +15,17 @@ export type MoeKoeSearchMode = 'quick' | 'recommend';
 export type MoeKoeNavigationMode = 'top' | 'side';
 export type MoeKoePlayerBarLayout = 'full' | 'content';
 export type MoeKoeStartupPage = 'Index' | 'Discover' | 'Library';
-export type MoeKoeDataSource = 'concept' | 'official';
+export type MoeKoeCustomTrayMenu = 'natvie' | 'custom';
+export type MoeKoeDataSource = 'concept' | 'MoeKoeBooleanicial';
 export type MoeKoeNetworkMode = 'mainnet' | 'testnet' | 'devnet';
 export type MoeKoeApiBaseUrlMode = 'default' | 'custom';
+
+export interface MoeKoeApiModeConfig {
+	host: string,
+	port: string,
+	wsPath: string
+}
+
 export interface MoeKoeShortcuts {
 	mainWindow: string,
 	quitApp: string,
@@ -73,7 +81,7 @@ export interface MoeKoeSettings {
 	nativeTitleBar: MoeKoeBoolean,
 	font: string,
 	startupPage: MoeKoeStartupPage,
-	customTrayMenu: MoeKoeBoolean,
+	customTrayMenu: MoeKoeCustomTrayMenu,
 	quality: MoeKoeSongQuality,
 	loudnessNormalization: MoeKoeBoolean,
 	pauseOnAudioOutputChange: MoeKoeBoolean,
@@ -88,16 +96,18 @@ export interface MoeKoeSettings {
 	highDpi: MoeKoeBoolean,
 	dpiScale: string,
 	minimizeToTray: MoeKoeBoolean,
+	hideDockIcon: MoeKoeBoolean,
 	autoStart: MoeKoeBoolean,
-	/** @see @link https://music.moekoe.cn/guide/network-modes.html */
 	networkMode: MoeKoeNetworkMode,
 	startMinimized: MoeKoeBoolean,
 	preventAppSuspension: MoeKoeBoolean,
-	apiMode: MoeKoeBoolean,
+	apiMode: 'auto' | MoeKoeBoolean,
+	apiModeConfig: MoeKoeApiModeConfig,
 	apiBaseUrlMode: MoeKoeApiBaseUrlMode,
 	apiBaseUrl: string,
 	touchBar: MoeKoeBoolean,
 	proxy: MoeKoeBoolean,
 	proxyUrl: string,
+	backgroundThrottling: MoeKoeBoolean,
 	shortcuts: MoeKoeShortcuts
 }
