@@ -5,8 +5,9 @@ export function useVueRouter(): {
 	route: import('vue-router').RouteLocationNormalizedLoadedGeneric,
 	router: import('vue-router')._RouterClassic
 } {
+	const vueApp = getVueApp();
 	return {
-		route: getVueApp().config.globalProperties.$route,
-		router: getVueApp().config.globalProperties.$router
+		route: vueApp.config.globalProperties.$route,
+		router: vueApp.config.globalProperties.$router
 	}
 }
